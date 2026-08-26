@@ -254,15 +254,17 @@ nav a {
 
 .publication {
   display: grid;
-  gap: 16px;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 22px;
   align-items: start;
 }
 
 .thumb-wrap {
   overflow: hidden;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
+  border: 1px solid rgba(18, 63, 56, 0.12);
+  border-radius: 8px;
+  background: #fff;
+  aspect-ratio: 4 / 3;
 }
 
 .image-button {
@@ -277,8 +279,9 @@ nav a {
 
 .thumb-wrap img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: contain;
 }
 
 .image-button:focus-visible {
@@ -475,12 +478,18 @@ footer {
   }
 
   .split,
+  .publication,
   .education-item {
     grid-template-columns: 1fr;
   }
 
   .thumb-wrap {
     max-width: none;
+    aspect-ratio: auto;
+  }
+
+  .thumb-wrap img {
+    height: auto;
   }
 
   .plain-list.columns {
