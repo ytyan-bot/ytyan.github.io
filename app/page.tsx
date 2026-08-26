@@ -37,7 +37,7 @@ const copy = {
         authors: '',
         venue: 'ACM Multimedia, 2026',
         role: 'First Author',
-        image: '/assets/acmmm-framework.png?v=20260826c',
+        image: '/assets/acmmm-framework.png?v=20260826d',
         alt: 'Framework figure for metric-aware test-time adaptation',
         links: [
           { label: 'PDF', href: '/papers/acmmm-2026-metric-aware-tta.pdf' },
@@ -120,7 +120,7 @@ const copy = {
         authors: '',
         venue: 'ACM Multimedia, 2026',
         role: '第一作者',
-        image: '/assets/acmmm-framework.png?v=20260826c',
+        image: '/assets/acmmm-framework.png?v=20260826d',
         alt: '指标感知测试时自适应方法框架图',
         links: [
           { label: 'PDF', href: '/papers/acmmm-2026-metric-aware-tta.pdf' },

@@ -261,8 +261,8 @@ nav a {
 
 .thumb-wrap {
   overflow: hidden;
-  border: 1px solid rgba(222, 222, 212, 0.75);
-  border-radius: 6px;
+  border: 0;
+  border-radius: 0;
   background: transparent;
 }
 
