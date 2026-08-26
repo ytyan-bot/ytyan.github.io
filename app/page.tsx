@@ -41,7 +41,6 @@ const copy = {
         alt: 'Framework figure for metric-aware test-time adaptation',
         links: [
           { label: 'PDF', href: '/papers/acmmm-2026-metric-aware-tta.pdf' },
-          { label: 'DOI', href: 'https://doi.org/10.1145/3767308.3837696' },
         ],
         summary:
           'A label-free test-time adaptation framework for unseen-patient epileptiform-discharge detection. JMTR adapts ranking scores for AUPRC, while DGC calibrates subtype posteriors under patient-dependent prior shift.',
@@ -124,7 +123,6 @@ const copy = {
         alt: '指标感知测试时自适应方法框架图',
         links: [
           { label: 'PDF', href: '/papers/acmmm-2026-metric-aware-tta.pdf' },
-          { label: 'DOI', href: 'https://doi.org/10.1145/3767308.3837696' },
         ],
         summary:
           '本文提出一个无标签测试时自适应框架，用于未见患者的癫痫样放电检测。JMTR 针对 AUPRC 调整样本排序，DGC 针对患者间类别先验偏移校正亚型后验概率。',
