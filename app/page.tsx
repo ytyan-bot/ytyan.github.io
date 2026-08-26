@@ -82,7 +82,6 @@ const copy = {
         highlights: [
           'Per-client counseling strategy adaptation',
           'PsychEval average score: 7.74 vs. 7.35 for PsychAgent 32B',
-          'Shanda Group research internship',
         ],
       },
     ],
@@ -166,7 +165,6 @@ const copy = {
         highlights: [
           '逐来访者咨询策略适配',
           'PsychEval 平均分 7.74，高于 PsychAgent 32B 的 7.35',
-          '盛大集团研究型实习项目',
         ],
       },
     ],
