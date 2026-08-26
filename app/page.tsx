@@ -57,7 +57,7 @@ const copy = {
         authors: '',
         venue: 'AAAI submission',
         role: 'Second Author',
-        image: '/assets/topocmamba-preview.png',
+        image: '/assets/topocmamba-preview.png?v=20260826c',
         alt: 'TopoCMamba paper preview',
         links: [],
         summary:
@@ -74,7 +74,7 @@ const copy = {
         authors: '',
         venue: 'Research internship project, planned CHI submission',
         role: 'First Author',
-        image: '/assets/compass-flow.png',
+        image: '/assets/compass-flow.png?v=20260826c',
         alt: 'ComPass workflow diagram',
         links: [],
         summary:
@@ -141,7 +141,7 @@ const copy = {
         authors: '',
         venue: 'AAAI 投稿',
         role: '第二作者',
-        image: '/assets/topocmamba-preview.png',
+        image: '/assets/topocmamba-preview.png?v=20260826c',
         alt: 'TopoCMamba 论文预览图',
         links: [],
         summary:
@@ -158,7 +158,7 @@ const copy = {
         authors: '',
         venue: '研究型实习项目，计划投稿 CHI',
         role: '第一作者',
-        image: '/assets/compass-flow.png',
+        image: '/assets/compass-flow.png?v=20260826c',
         alt: 'ComPass 工作流程图',
         links: [],
         summary:
