@@ -35,7 +35,7 @@ const copy = {
         title:
           'Metric-Aware Test-Time Adaptation for Cross-Subject Multimodal Epileptiform-Discharge Detection',
         authors: '',
-        venue: 'ACM Multimedia, 2026',
+        venue: 'ACM MM 2026',
         role: 'First Author',
         image: '/assets/acmmm-framework.png?v=20260826d',
         alt: 'Framework figure for metric-aware test-time adaptation',
@@ -117,7 +117,7 @@ const copy = {
         title:
           '面向跨受试者多模态癫痫样放电检测的指标感知测试时自适应 / Metric-Aware Test-Time Adaptation for Cross-Subject Multimodal Epileptiform-Discharge Detection',
         authors: '',
-        venue: 'ACM Multimedia, 2026',
+        venue: 'ACM MM 2026',
         role: '第一作者',
         image: '/assets/acmmm-framework.png?v=20260826d',
         alt: '指标感知测试时自适应方法框架图',
