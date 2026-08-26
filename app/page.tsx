@@ -1,8 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type Lang = 'en' | 'zh';
+type ImagePreview = {
+  alt: string;
+  src: string;
+  title: string;
+};
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 const localHref = (href: string) =>
@@ -182,7 +187,23 @@ const copy = {
 
 export default function Home() {
   const [lang, setLang] = useState<Lang>('zh');
+  const [preview, setPreview] = useState<ImagePreview | null>(null);
   const t = copy[lang];
+
+  useEffect(() => {
+    if (!preview) {
+      return;
+    }
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setPreview(null);
+      }
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [preview]);
 
   return (
     <main lang={lang}>
@@ -247,7 +268,20 @@ export default function Home() {
               {t.publications.map((paper) => (
                 <article className="publication" key={paper.title}>
                   <div className="thumb-wrap">
-                    <img src={localHref(paper.image)} alt={paper.alt} />
+                    <button
+                      aria-label={`Open image: ${paper.title}`}
+                      className="image-button"
+                      onClick={() =>
+                        setPreview({
+                          alt: paper.alt,
+                          src: localHref(paper.image),
+                          title: paper.title,
+                        })
+                      }
+                      type="button"
+                    >
+                      <img src={localHref(paper.image)} alt={paper.alt} />
+                    </button>
                   </div>
                   <div>
                     <div className="pub-meta">
@@ -297,6 +331,28 @@ export default function Home() {
           <footer>{t.footer}</footer>
         </div>
       </div>
+
+      {preview ? (
+        <div
+          aria-modal="true"
+          className="image-modal"
+          onClick={() => setPreview(null)}
+          role="dialog"
+        >
+          <button
+            aria-label="Close image preview"
+            className="modal-close"
+            onClick={() => setPreview(null)}
+            type="button"
+          >
+            ×
+          </button>
+          <figure onClick={(event) => event.stopPropagation()}>
+            <img src={preview.src} alt={preview.alt} />
+            <figcaption>{preview.title}</figcaption>
+          </figure>
+        </div>
+      ) : null}
     </main>
   );
 }
