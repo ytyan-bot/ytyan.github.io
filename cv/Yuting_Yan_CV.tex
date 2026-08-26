@@ -1,0 +1,111 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.72in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+
+\definecolor{accent}{HTML}{0F766E}
+\definecolor{textgray}{HTML}{4B5563}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.2em, itemsep=2pt, topsep=3pt}
+
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}
+  {0pt}
+  {}
+  [\vspace{2pt}\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{7pt}
+
+\newcommand{\cvitem}[2]{
+  \begin{tabularx}{\textwidth}{@{}X r@{}}
+    #1 & {\color{textgray}#2}
+  \end{tabularx}
+}
+
+\newcommand{\paper}[5]{
+  \textbf{#1} \hfill {\color{textgray}#2}\\
+  {\itshape #3}\\
+  #4
+  \begin{itemize}
+    #5
+  \end{itemize}
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \textbf{Yuting Yan}}\\
+  \vspace{4pt}
+  M.S. Student in Software Engineering, University of Science and Technology of China\\
+  \vspace{4pt}
+  \href{mailto:ytyan@mail.ustc.edu.cn}{ytyan@mail.ustc.edu.cn}
+  \quad | \quad
+  \href{https://ytyan-bot.github.io/ytyan.github.io/}{Personal Homepage}
+\end{center}
+
+\section{Research Interests}
+Large language models and intelligent agents; brain-computer interfaces and EEG analysis; reliable medical AI under cross-subject and cross-domain distribution shifts; test-time adaptation; multimodal clinical signal analysis.
+
+\section{Education}
+\cvitem{\textbf{University of Science and Technology of China}\\
+M.S. in Software Engineering}{2024--2027}
+\vspace{6pt}
+
+\cvitem{\textbf{Southwest Jiaotong University}\\
+B.E. in Artificial Intelligence}{2019--2023}
+
+\section{Selected Publications}
+\paper
+  {Metric-Aware Test-Time Adaptation for Cross-Subject Multimodal Epileptiform-Discharge Detection}
+  {ACM MM 2026}
+  {First Author}
+  {A label-free test-time adaptation framework for unseen-patient epileptiform-discharge detection. JMTR adapts candidate rankings for AUPRC, while DGC calibrates subtype posteriors under patient-dependent prior shift.}
+  {
+    \item NeuroMM-2026 Challenge: 3rd place in binary spike detection.
+    \item NeuroMM-2026 Challenge: 3rd place in five-class subtype classification.
+    \item Frozen backbone, no target labels, post-hoc adaptation.
+  }
+
+\paper
+  {Reparameterizing Mamba via Frequency-Induced Topological Conduction for Medical Image Segmentation under Clinical Acquisition Heterogeneity}
+  {AAAI 2027, under submission}
+  {Second Author}
+  {TopoCMamba regulates Mamba state propagation with frequency-induced topological conductance, improving anatomical boundary preservation and unseen-domain segmentation across heterogeneous clinical acquisition settings.}
+  {
+    \item Frequency-Topology Conductance Field for structural and boundary cues.
+    \item Conductance-Gated State Scan to suppress cross-boundary state mixing.
+    \item Evaluated across 15 datasets and six medical imaging modalities.
+  }
+
+\paper
+  {LynciaPsyEvo: Enabling Inter-Session Self-Evolution for Personalized LLM Counseling}
+  {ICLR 2027, planned submission}
+  {First Author}
+  {A multi-session counseling agent that keeps the base LLM frozen while adapting therapeutic strategies for each client across sessions, improving personalization and longitudinal self-evolution.}
+  {
+    \item Per-client counseling strategy adaptation.
+    \item PsychEval average score: 7.74, compared with 7.35 for PsychAgent 32B.
+  }
+
+\section{Selected Awards and Challenges}
+\begin{itemize}
+  \item 3rd place, Binary Spike Detection Track, NeuroMM-2026 Challenge.
+  \item 3rd place, Five-Class Subtype Classification Track, NeuroMM-2026 Challenge.
+\end{itemize}
+
+\section{Research Keywords}
+\begin{itemize}
+  \item Personalized LLM agents, counseling agents, preference optimization.
+  \item EEG analysis, multimodal EEG-video understanding, epileptiform-discharge detection.
+  \item Test-time adaptation, domain shift, cross-subject generalization.
+  \item Medical image segmentation, Mamba-based architectures, clinical acquisition heterogeneity.
+\end{itemize}
+
+\end{document}
