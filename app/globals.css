@@ -254,8 +254,7 @@ nav a {
 
 .publication {
   display: grid;
-  grid-template-columns: 214px minmax(0, 1fr);
-  gap: 26px;
+  gap: 16px;
   align-items: start;
 }
 
@@ -476,17 +475,12 @@ footer {
   }
 
   .split,
-  .publication,
   .education-item {
     grid-template-columns: 1fr;
   }
 
-  .publication {
-    gap: 16px;
-  }
-
   .thumb-wrap {
-    max-width: 420px;
+    max-width: none;
   }
 
   .plain-list.columns {
