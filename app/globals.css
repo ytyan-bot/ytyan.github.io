@@ -270,11 +270,13 @@ nav a {
 .image-button {
   appearance: none;
   width: 100%;
+  height: 100%;
   padding: 0;
   border: 0;
   background: transparent;
   cursor: zoom-in;
   display: block;
+  line-height: 0;
 }
 
 .thumb-wrap img {
@@ -398,7 +400,7 @@ footer {
 .image-modal {
   position: fixed;
   inset: 0;
-  z-index: 20;
+  z-index: 1000;
   display: grid;
   place-items: center;
   padding: 34px;
