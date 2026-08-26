@@ -77,9 +77,10 @@ const copy = {
         alt: 'ComPass workflow diagram',
         links: [],
         summary:
-          'A multi-session counseling agent that keeps the base LLM frozen while adapting therapeutic strategy for each client across sessions, improving personalization and longitudinal self-evolution.',
+          'This work builds a multi-session LLM counseling agent that keeps the base model frozen while adapting counseling strategies for each unseen client across sessions, enabling personalized support and longitudinal self-evolution at deployment time.',
         highlights: [
-          'Per-client counseling strategy adaptation',
+          'Agent: test-time, per-client counseling policy adaptation across sessions',
+          'SOCA: state-conditioned ordinal credit for learning from collapsed scores and single-trajectory feedback',
           'PsychEval average score: 7.74 vs. 7.35 for PsychAgent 32B',
         ],
       },
@@ -159,9 +160,10 @@ const copy = {
         alt: 'ComPass 工作流程图',
         links: [],
         summary:
-          '该工作构建多会谈心理咨询 Agent，在冻结基座大模型的基础上，为每位来访者跨会谈适配咨询策略，实现个性化与纵向自进化。',
+          '该工作构建多会谈心理咨询 Agent，在冻结基座大模型的基础上，面向部署时首次到来的来访者进行逐人、跨会谈咨询策略适配，实现个性化支持与纵向自进化。',
         highlights: [
-          '逐来访者咨询策略适配',
+          'Agent：面向 test-time、per-client 的跨会谈咨询策略适配',
+          'SOCA：状态条件化序数信用，从分数坍缩与单轨迹反馈中重建可学习信号',
           'PsychEval 平均分 7.74，高于 PsychAgent 32B 的 7.35',
         ],
       },
