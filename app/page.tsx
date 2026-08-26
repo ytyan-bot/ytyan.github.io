@@ -55,7 +55,7 @@ const copy = {
         title:
           'Reparameterizing Mamba via Frequency-Induced Topological Conduction for Medical Image Segmentation under Clinical Acquisition Heterogeneity',
         authors: '',
-        venue: 'AAAI submission',
+        venue: 'AAAI 2027',
         role: 'Second Author',
         image: '/assets/topocmamba-preview.png?v=20260826c',
         alt: 'TopoCMamba paper preview',
@@ -72,7 +72,7 @@ const copy = {
         title:
           'LynciaPsyEvo: Enabling Inter-Session Self-Evolution for Personalized LLM Counseling',
         authors: '',
-        venue: 'Research internship project, planned CHI submission',
+        venue: 'ICLR 2027',
         role: 'First Author',
         image: '/assets/compass-flow.png?v=20260826c',
         alt: 'ComPass workflow diagram',
@@ -138,7 +138,7 @@ const copy = {
         title:
           '面向临床采集异质性医学图像分割的频率诱导拓扑传导 Mamba 重参数化 / Reparameterizing Mamba via Frequency-Induced Topological Conduction for Medical Image Segmentation under Clinical Acquisition Heterogeneity',
         authors: '',
-        venue: 'AAAI 投稿',
+        venue: 'AAAI 2027',
         role: '第二作者',
         image: '/assets/topocmamba-preview.png?v=20260826c',
         alt: 'TopoCMamba 论文预览图',
@@ -155,7 +155,7 @@ const copy = {
         title:
           'LynciaPsyEvo：面向个性化 LLM 咨询的跨会谈自进化 / LynciaPsyEvo: Enabling Inter-Session Self-Evolution for Personalized LLM Counseling',
         authors: '',
-        venue: '研究型实习项目，计划投稿 CHI',
+        venue: 'ICLR 2027',
         role: '第一作者',
         image: '/assets/compass-flow.png?v=20260826c',
         alt: 'ComPass 工作流程图',
