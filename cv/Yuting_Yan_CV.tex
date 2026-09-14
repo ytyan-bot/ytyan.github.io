@@ -64,7 +64,7 @@ B.E. in Artificial Intelligence}{2019--2023}
 \section{Selected Publications}
 \paper
   {Metric-Aware Test-Time Adaptation for Cross-Subject Multimodal Epileptiform-Discharge Detection}
-  {ACM MM 2026}
+  {ACM MM 2026, accepted}
   {First Author}
   {A label-free test-time adaptation framework for unseen-patient epileptiform-discharge detection. JMTR adapts candidate rankings for AUPRC, while DGC calibrates subtype posteriors under patient-dependent prior shift.}
   {
@@ -85,13 +85,16 @@ B.E. in Artificial Intelligence}{2019--2023}
   }
 
 \paper
-  {LynciaPsyEvo: Enabling Inter-Session Self-Evolution for Personalized LLM Counseling}
+  {PsyEvo: Test-Time Personalization and Self-Evolution for Multi-Session Counseling}
   {ICLR 2027, planned submission}
   {First Author}
-  {A multi-session counseling agent that keeps the base LLM frozen while adapting therapeutic strategies for each client across sessions, improving personalization and longitudinal self-evolution.}
+  {A multi-session counseling agent combining client-specific skill selection and cross-client response-policy learning over a frozen base LLM.}
   {
-    \item Per-client counseling strategy adaptation.
-    \item PsychEval average score: 7.74, compared with 7.35 for PsychAgent 32B.
+    \item HBSP combines shared skill values with client-specific posteriors for personalized skill selection.
+    \item LiPO updates a shared lightweight response adapter between sessions using cross-client preferences.
+    \item SOCA provides consistency-checked candidate preferences and ordinal trajectory credit.
+    \item Current manuscript: PsychEval Overall 7.675; reported PsychAgent-32B reference 7.348.
+    \item MusPsy working-alliance mean: 4.5850; protocol-matched ranking against references is not yet established.
   }
 
 \section{Selected Awards and Challenges}

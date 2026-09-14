@@ -18,6 +18,7 @@ const copy = {
     role: 'M.S. Student · University of Science and Technology of China',
     nav: ['Bio', 'Publications', 'Education'],
     languageLabel: 'Language',
+    cvLabel: 'CV (Chinese, PDF)',
     eyebrow: 'Medical AI · BCI · Test-Time Adaptation',
     headline:
       'Building adaptive AI systems for patient-specific clinical signals and personalized human-centered interaction.',
@@ -25,7 +26,7 @@ const copy = {
     researchInterests: 'Research Interests',
     publicationsTitle: 'Selected Publications',
     educationTitle: 'Education',
-    footer: 'Last updated 2026-08 · Designed for ytyan.github.io',
+    footer: 'Last updated 2026-09-14 · Designed for ytyan.github.io',
     interests: [
       'Large language models and intelligent agents',
       'Brain-computer interfaces and EEG analysis',
@@ -35,7 +36,7 @@ const copy = {
         title:
           'Metric-Aware Test-Time Adaptation for Cross-Subject Multimodal Epileptiform-Discharge Detection',
         authors: '',
-        venue: 'ACM MM 2026',
+        venue: 'ACM MM 2026 · Accepted',
         role: 'First Author',
         image: '/assets/acmmm-framework.png?v=20260826d',
         alt: 'Framework figure for metric-aware test-time adaptation',
@@ -69,19 +70,21 @@ const copy = {
       },
       {
         title:
-          'LynciaPsyEvo: Enabling Inter-Session Self-Evolution for Personalized LLM Counseling',
+          'PsyEvo: Test-Time Personalization and Self-Evolution for Multi-Session Counseling',
         authors: '',
         venue: 'ICLR 2027, planned submission',
         role: 'First Author',
-        image: '/assets/compass-flow.png?v=20260826c',
-        alt: 'ComPass workflow diagram',
+        image: '/assets/psyevo-framework-20260914.png',
+        alt: 'PsyEvo framework: HBSP personalization, LiPO population updates, and SOCA credit assignment',
         links: [],
         summary:
-          'This work builds a multi-session LLM counseling agent that keeps the base model frozen while adapting counseling strategies for each unseen client across sessions, enabling personalized support and longitudinal self-evolution at deployment time.',
+          'PsyEvo combines client-specific skill selection with cross-client response-policy learning over a frozen base LLM. It learns which interventions suit each unseen client and improves how the counselor responds through experience accumulated across sessions.',
         highlights: [
-          'Agent: test-time, per-client counseling policy adaptation across sessions',
-          'SOCA: state-conditioned ordinal credit for learning from collapsed scores and single-trajectory feedback',
-          'PsychEval average score: 7.74 vs. 7.35 for PsychAgent 32B',
+          'HBSP: shared skill values and client-specific posteriors for personalized skill selection',
+          'LiPO: cross-client preference learning updates a shared lightweight adapter between sessions',
+          'SOCA: consistency-checked candidate preferences and ordinal credit along realized trajectories',
+          'Current manuscript: PsychEval Overall 7.675; reported PsychAgent-32B reference 7.348',
+          'MusPsy working-alliance mean: 4.5850; protocol-matched ranking against references is not yet established',
         ],
       },
     ],
@@ -102,13 +105,14 @@ const copy = {
     role: '中国科学技术大学 · 软件工程硕士研究生',
     nav: ['简介', '论文', '教育'],
     languageLabel: '语言',
+    cvLabel: '下载简历（中文 PDF）',
     eyebrow: '医疗人工智能 · 脑机接口 · 测试时自适应',
     headline: '面向个体差异，构建可在部署后持续适配的可靠智能系统。',
     bio: '我目前是中国科学技术大学软件工程硕士研究生，研究兴趣聚焦于大模型智能体，以及跨受试者、跨域分布偏移下的可靠医疗人工智能。近期工作包括个性化大语言模型智能体、测试时自适应、多模态 EEG-视频癫痫样放电检测与医学图像分割。',
     researchInterests: '研究兴趣',
     publicationsTitle: '代表论文',
     educationTitle: '教育经历',
-    footer: '最近更新 2026-08 · Designed for ytyan.github.io',
+    footer: '最近更新 2026-09-14 · Designed for ytyan.github.io',
     interests: [
       '大语言模型与智能体',
       '脑机接口与 EEG 信号分析',
@@ -118,7 +122,7 @@ const copy = {
         title:
           '面向跨受试者多模态癫痫样放电检测的指标感知测试时自适应 / Metric-Aware Test-Time Adaptation for Cross-Subject Multimodal Epileptiform-Discharge Detection',
         authors: '',
-        venue: 'ACM MM 2026',
+        venue: 'ACM MM 2026 · 已录取',
         role: '第一作者',
         image: '/assets/acmmm-framework.png?v=20260826d',
         alt: '指标感知测试时自适应方法框架图',
@@ -152,19 +156,21 @@ const copy = {
       },
       {
         title:
-          'LynciaPsyEvo：面向个性化 LLM 咨询的跨会谈自进化 / LynciaPsyEvo: Enabling Inter-Session Self-Evolution for Personalized LLM Counseling',
+          'PsyEvo：面向多会谈心理咨询的测试时个性化与自进化 / PsyEvo: Test-Time Personalization and Self-Evolution for Multi-Session Counseling',
         authors: '',
         venue: 'ICLR 2027（预期投稿）',
         role: '第一作者',
-        image: '/assets/compass-flow.png?v=20260826c',
-        alt: 'ComPass 工作流程图',
+        image: '/assets/psyevo-framework-20260914.png',
+        alt: 'PsyEvo 框架：HBSP 个性化、LiPO 群体更新与 SOCA 信用分配',
         links: [],
         summary:
-          '该工作构建多会谈心理咨询 Agent，在冻结基座大模型的基础上，面向部署时首次到来的来访者进行逐人、跨会谈咨询策略适配，实现个性化支持与纵向自进化。',
+          'PsyEvo 在冻结基础模型上结合个体咨询技能选择与跨来访者的回应策略学习，面向此前未见的来访者，在持续交互中学习“对这个人选择什么干预”与“如何更好地回应”。',
         highlights: [
-          'Agent：面向 test-time、per-client 的跨会谈咨询策略适配',
-          'SOCA：状态条件化序数信用，从分数坍缩与单轨迹反馈中重建可学习信号',
-          'PsychEval 平均分 7.74，高于 PsychAgent 32B 的 7.35',
+          'HBSP：结合共享技能价值与来访者专属后验，选择个性化咨询技能',
+          'LiPO：汇集跨来访者偏好，在会谈间更新共享轻量适配器',
+          'SOCA：通过一致性核验构造候选偏好，并沿已发生轨迹传播序数信用',
+          '当前论文实验：PsychEval Overall 7.675；PsychAgent-32B 已报告参考值 7.348',
+          'MusPsy 工作同盟均分 4.5850；尚未确认与参考组的同协议排名',
         ],
       },
     ],
@@ -218,6 +224,7 @@ export default function Home() {
           <p className="role">{t.role}</p>
           <div className="contact-list">
             <a href="mailto:ytyan@mail.ustc.edu.cn">ytyan@mail.ustc.edu.cn</a>
+            <a href={localHref('/cv/Yuting_Yan_CV_zh.pdf')} download>{t.cvLabel}</a>
           </div>
           <div className="language-switch" aria-label={t.languageLabel}>
             <button
