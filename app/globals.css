@@ -522,3 +522,6 @@ footer {
     right: 10px;
   }
 }
+
+.publication-group-title { margin: 0 0 18px; padding-bottom: 10px; border-bottom: 1px solid var(--line); font-size: 1.12rem; }
+.publication-group .publication + .publication { margin-top: 28px; }

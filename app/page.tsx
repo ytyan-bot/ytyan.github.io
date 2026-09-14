@@ -24,7 +24,8 @@ const copy = {
       'Building adaptive AI systems for patient-specific clinical signals and personalized human-centered interaction.',
     bio: "I am a master's student at the University of Science and Technology of China, with research interests in large language model agents and reliable medical AI under cross-subject and cross-domain distribution shifts. My current work includes personalized LLM agents, test-time adaptation, multimodal EEG-video analysis, and medical image segmentation.",
     researchInterests: 'Research Interests',
-    publicationsTitle: 'Selected Publications',
+    publicationsTitle: 'Research',
+    publicationGroups: [{ status: 'accepted', label: 'Accepted Publications' }, { status: 'submitted', label: 'Under Submission' }, { status: 'planned', label: 'Planned Submissions' }],
     educationTitle: 'Education',
     footer: 'Last updated 2026-09-14 · Designed for ytyan.github.io',
     interests: [
@@ -37,6 +38,7 @@ const copy = {
           'Metric-Aware Test-Time Adaptation for Cross-Subject Multimodal Epileptiform-Discharge Detection',
         authors: '',
         venue: 'ACM MM 2026 · Accepted',
+        status: 'accepted',
         role: 'First Author',
         image: '/assets/acmmm-framework.png?v=20260826d',
         alt: 'Framework figure for metric-aware test-time adaptation',
@@ -56,6 +58,7 @@ const copy = {
           'Reparameterizing Mamba via Frequency-Induced Topological Conduction for Medical Image Segmentation under Clinical Acquisition Heterogeneity',
         authors: '',
         venue: 'AAAI 2027, under submission',
+        status: 'submitted',
         role: 'Second Author',
         image: '/assets/topocmamba-preview.png?v=20260826c',
         alt: 'TopoCMamba paper preview',
@@ -73,6 +76,7 @@ const copy = {
           'PsyEvo: Test-Time Personalization and Self-Evolution for Multi-Session Counseling',
         authors: '',
         venue: 'ICLR 2027, planned submission',
+        status: 'planned',
         role: 'First Author',
         image: '/assets/psyevo-framework-20260914.png',
         alt: 'PsyEvo framework: HBSP personalization, LiPO population updates, and SOCA credit assignment',
@@ -110,7 +114,8 @@ const copy = {
     headline: '面向个体差异，构建可在部署后持续适配的可靠智能系统。',
     bio: '我目前是中国科学技术大学软件工程硕士研究生，研究兴趣聚焦于大模型智能体，以及跨受试者、跨域分布偏移下的可靠医疗人工智能。近期工作包括个性化大语言模型智能体、测试时自适应、多模态 EEG-视频癫痫样放电检测与医学图像分割。',
     researchInterests: '研究兴趣',
-    publicationsTitle: '代表论文',
+    publicationsTitle: '科研成果',
+    publicationGroups: [{ status: 'accepted', label: '已录取论文' }, { status: 'submitted', label: '在投论文' }, { status: 'planned', label: '预期投稿' }],
     educationTitle: '教育经历',
     footer: '最近更新 2026-09-14 · Designed for ytyan.github.io',
     interests: [
@@ -123,6 +128,7 @@ const copy = {
           '面向跨受试者多模态癫痫样放电检测的指标感知测试时自适应 / Metric-Aware Test-Time Adaptation for Cross-Subject Multimodal Epileptiform-Discharge Detection',
         authors: '',
         venue: 'ACM MM 2026 · 已录取',
+        status: 'accepted',
         role: '第一作者',
         image: '/assets/acmmm-framework.png?v=20260826d',
         alt: '指标感知测试时自适应方法框架图',
@@ -142,6 +148,7 @@ const copy = {
           '面向临床采集异质性医学图像分割的频率诱导拓扑传导 Mamba 重参数化 / Reparameterizing Mamba via Frequency-Induced Topological Conduction for Medical Image Segmentation under Clinical Acquisition Heterogeneity',
         authors: '',
         venue: 'AAAI 2027（在投）',
+        status: 'submitted',
         role: '第二作者',
         image: '/assets/topocmamba-preview.png?v=20260826c',
         alt: 'TopoCMamba 论文预览图',
@@ -159,6 +166,7 @@ const copy = {
           'PsyEvo：面向多会谈心理咨询的测试时个性化与自进化 / PsyEvo: Test-Time Personalization and Self-Evolution for Multi-Session Counseling',
         authors: '',
         venue: 'ICLR 2027（预期投稿）',
+        status: 'planned',
         role: '第一作者',
         image: '/assets/psyevo-framework-20260914.png',
         alt: 'PsyEvo 框架：HBSP 个性化、LiPO 群体更新与 SOCA 信用分配',
@@ -270,7 +278,10 @@ export default function Home() {
           <section className="section" id="publications">
             <h3>{t.publicationsTitle}</h3>
             <div className="publication-list">
-              {t.publications.map((paper) => (
+              {t.publicationGroups.map((group) => (
+                <div className="publication-group" key={group.status}>
+                  <h4 className="publication-group-title">{group.label}</h4>
+                  {t.publications.filter((paper) => paper.status === group.status).map((paper) => (
                 <article className="publication" key={paper.title}>
                   <div className="thumb-wrap">
                     <button
@@ -314,6 +325,8 @@ export default function Home() {
                     ) : null}
                   </div>
                 </article>
+                  ))}
+                </div>
               ))}
             </div>
           </section>
