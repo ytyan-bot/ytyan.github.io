@@ -25,7 +25,7 @@ const copy = {
     bio: "I am a master's student at the University of Science and Technology of China, with research interests in large language model agents and reliable medical AI under cross-subject and cross-domain distribution shifts. My current work includes personalized LLM agents, test-time adaptation, multimodal EEG-video analysis, and medical image segmentation.",
     researchInterests: 'Research Interests',
     publicationsTitle: 'Research',
-    publicationGroups: [{ status: 'accepted', label: 'Accepted Publications' }, { status: 'submitted', label: 'Under Submission' }, { status: 'planned', label: 'Planned Submissions' }],
+    publicationGroups: [{ status: 'accepted', label: 'Accepted Publications' }, { status: 'submitted', label: 'Under Submission' }],
     educationTitle: 'Education',
     footer: 'Last updated 2026-09-14 · Designed for ytyan.github.io',
     interests: [
@@ -55,6 +55,26 @@ const copy = {
       },
       {
         title:
+          'PsyEvo: Test-Time Personalization and Self-Evolution for Multi-Session Counseling',
+        authors: '',
+        venue: 'ICLR 2027, under submission',
+        status: 'submitted',
+        role: 'First Author',
+        image: '/assets/psyevo-test-time-learning.png',
+        alt: 'PsyEvo test-time learning: within-session counseling and between-session HBSP, population LiPO, and SOCA updates',
+        links: [],
+        summary:
+          'PsyEvo combines client-specific skill selection with cross-client response-policy learning over a frozen base LLM. It learns which interventions suit each unseen client and improves how the counselor responds through experience accumulated across sessions.',
+        highlights: [
+          'HBSP: shared skill values and client-specific posteriors for personalized skill selection',
+          'LiPO: cross-client preference learning updates a shared lightweight adapter between sessions',
+          'SOCA: consistency-checked candidate preferences and ordinal credit along realized trajectories',
+          'Multi-session psychological counseling: PsyEvo achieves SOTA on PsychEval and MusPsy, with an Overall score of 7.675 and a mean working-alliance score of 4.5850, respectively',
+          'Summary quality evaluation: SOCA achieves SOTA on SummEval, with a mean Spearman correlation of 0.508',
+        ],
+      },
+      {
+        title:
           'Reparameterizing Mamba via Frequency-Induced Topological Conduction for Medical Image Segmentation under Clinical Acquisition Heterogeneity',
         authors: '',
         venue: 'AAAI 2027, under submission',
@@ -69,26 +89,6 @@ const copy = {
           'Frequency-Topology Conductance Field for structural and boundary cues',
           'Conductance-Gated State Scan to suppress cross-boundary state mixing',
           'Evaluated across 15 datasets and six medical imaging modalities',
-        ],
-      },
-      {
-        title:
-          'PsyEvo: Test-Time Personalization and Self-Evolution for Multi-Session Counseling',
-        authors: '',
-        venue: 'ICLR 2027, planned submission',
-        status: 'planned',
-        role: 'First Author',
-        image: '/assets/psyevo-test-time-learning.png',
-        alt: 'PsyEvo test-time learning: within-session counseling and between-session HBSP, population LiPO, and SOCA updates',
-        links: [],
-        summary:
-          'PsyEvo combines client-specific skill selection with cross-client response-policy learning over a frozen base LLM. It learns which interventions suit each unseen client and improves how the counselor responds through experience accumulated across sessions.',
-        highlights: [
-          'HBSP: shared skill values and client-specific posteriors for personalized skill selection',
-          'LiPO: cross-client preference learning updates a shared lightweight adapter between sessions',
-          'SOCA: consistency-checked candidate preferences and ordinal credit along realized trajectories',
-          'Multi-session psychological counseling: PsyEvo achieves SOTA on PsychEval and MusPsy, with an Overall score of 7.675 and a mean working-alliance score of 4.5850, respectively',
-          'Summary quality evaluation: SOCA achieves SOTA on SummEval, with a mean Spearman correlation of 0.508',
         ],
       },
     ],
@@ -115,7 +115,7 @@ const copy = {
     bio: '我目前是中国科学技术大学软件工程硕士研究生，研究兴趣聚焦于大模型智能体，以及跨受试者、跨域分布偏移下的可靠医疗人工智能。近期工作包括个性化大语言模型智能体、测试时自适应、多模态 EEG-视频癫痫样放电检测与医学图像分割。',
     researchInterests: '研究兴趣',
     publicationsTitle: '科研成果',
-    publicationGroups: [{ status: 'accepted', label: '已录用论文' }, { status: 'submitted', label: '在投论文' }, { status: 'planned', label: '预期投稿' }],
+    publicationGroups: [{ status: 'accepted', label: '已录用论文' }, { status: 'submitted', label: '在投论文' }],
     educationTitle: '教育经历',
     footer: '最近更新 2026-09-14 · Designed for ytyan.github.io',
     interests: [
@@ -145,6 +145,26 @@ const copy = {
       },
       {
         title:
+          'PsyEvo：面向多会谈心理咨询的测试时个性化与自进化 / PsyEvo: Test-Time Personalization and Self-Evolution for Multi-Session Counseling',
+        authors: '',
+        venue: 'ICLR 2027（在投）',
+        status: 'submitted',
+        role: '第一作者',
+        image: '/assets/psyevo-test-time-learning.png',
+        alt: 'PsyEvo 测试时学习：会谈内咨询与会谈间 HBSP、群体 LiPO、SOCA 更新',
+        links: [],
+        summary:
+          'PsyEvo 在冻结基础模型上结合个体咨询技能选择与跨来访者的回应策略学习，面向此前未见的来访者，在持续交互中学习“对这个人选择什么干预”与“如何更好地回应”。',
+        highlights: [
+          'HBSP：结合共享技能价值与来访者专属后验，选择个性化咨询技能',
+          'LiPO：汇集跨来访者偏好，在会谈间更新共享轻量适配器',
+          'SOCA：通过一致性核验构造候选偏好，并沿已发生轨迹传播序数信用',
+          '多会谈心理咨询任务：PsyEvo 在 PsychEval 和 MusPsy 上达到 SOTA，综合均分和工作同盟均分分别为 7.675、4.5850',
+          '摘要质量评估任务：SOCA 在 SummEval 上达到 SOTA，平均 Spearman 相关系数为 0.508',
+        ],
+      },
+      {
+        title:
           '面向临床采集异质性医学图像分割的频率诱导拓扑传导 Mamba 重参数化 / Reparameterizing Mamba via Frequency-Induced Topological Conduction for Medical Image Segmentation under Clinical Acquisition Heterogeneity',
         authors: '',
         venue: 'AAAI 2027（在投）',
@@ -159,26 +179,6 @@ const copy = {
           'Frequency-Topology Conductance Field 建模结构与边界线索',
           'Conductance-Gated State Scan 抑制跨边界状态混合',
           '在 15 个数据集、6 种医学影像模态上进行验证',
-        ],
-      },
-      {
-        title:
-          'PsyEvo：面向多会谈心理咨询的测试时个性化与自进化 / PsyEvo: Test-Time Personalization and Self-Evolution for Multi-Session Counseling',
-        authors: '',
-        venue: 'ICLR 2027（预期投稿）',
-        status: 'planned',
-        role: '第一作者',
-        image: '/assets/psyevo-test-time-learning.png',
-        alt: 'PsyEvo 测试时学习：会谈内咨询与会谈间 HBSP、群体 LiPO、SOCA 更新',
-        links: [],
-        summary:
-          'PsyEvo 在冻结基础模型上结合个体咨询技能选择与跨来访者的回应策略学习，面向此前未见的来访者，在持续交互中学习“对这个人选择什么干预”与“如何更好地回应”。',
-        highlights: [
-          'HBSP：结合共享技能价值与来访者专属后验，选择个性化咨询技能',
-          'LiPO：汇集跨来访者偏好，在会谈间更新共享轻量适配器',
-          'SOCA：通过一致性核验构造候选偏好，并沿已发生轨迹传播序数信用',
-          '多会谈心理咨询任务：PsyEvo 在 PsychEval 和 MusPsy 上达到 SOTA，综合均分和工作同盟均分分别为 7.675、4.5850',
-          '摘要质量评估任务：SOCA 在 SummEval 上达到 SOTA，平均 Spearman 相关系数为 0.508',
         ],
       },
     ],
