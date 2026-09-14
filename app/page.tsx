@@ -115,7 +115,7 @@ const copy = {
     bio: '我目前是中国科学技术大学软件工程硕士研究生，研究兴趣聚焦于大模型智能体，以及跨受试者、跨域分布偏移下的可靠医疗人工智能。近期工作包括个性化大语言模型智能体、测试时自适应、多模态 EEG-视频癫痫样放电检测与医学图像分割。',
     researchInterests: '研究兴趣',
     publicationsTitle: '科研成果',
-    publicationGroups: [{ status: 'accepted', label: '已录取论文' }, { status: 'submitted', label: '在投论文' }, { status: 'planned', label: '预期投稿' }],
+    publicationGroups: [{ status: 'accepted', label: '已录用论文' }, { status: 'submitted', label: '在投论文' }, { status: 'planned', label: '预期投稿' }],
     educationTitle: '教育经历',
     footer: '最近更新 2026-09-14 · Designed for ytyan.github.io',
     interests: [
@@ -127,7 +127,7 @@ const copy = {
         title:
           '面向跨受试者多模态癫痫样放电检测的指标感知测试时自适应 / Metric-Aware Test-Time Adaptation for Cross-Subject Multimodal Epileptiform-Discharge Detection',
         authors: '',
-        venue: 'ACM MM 2026 · 已录取',
+        venue: 'ACM MM 2026 · 已录用',
         status: 'accepted',
         role: '第一作者',
         image: '/assets/acmmm-framework.png?v=20260826d',
