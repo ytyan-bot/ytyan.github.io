@@ -78,8 +78,8 @@ const copy = {
         venue: 'ICLR 2027, planned submission',
         status: 'planned',
         role: 'First Author',
-        image: '/assets/psyevo-framework-20260914.png',
-        alt: 'PsyEvo framework: HBSP personalization, LiPO population updates, and SOCA credit assignment',
+        image: '/assets/psyevo-test-time-learning.png',
+        alt: 'PsyEvo test-time learning: within-session counseling and between-session HBSP, population LiPO, and SOCA updates',
         links: [],
         summary:
           'PsyEvo combines client-specific skill selection with cross-client response-policy learning over a frozen base LLM. It learns which interventions suit each unseen client and improves how the counselor responds through experience accumulated across sessions.',
@@ -168,8 +168,8 @@ const copy = {
         venue: 'ICLR 2027（预期投稿）',
         status: 'planned',
         role: '第一作者',
-        image: '/assets/psyevo-framework-20260914.png',
-        alt: 'PsyEvo 框架：HBSP 个性化、LiPO 群体更新与 SOCA 信用分配',
+        image: '/assets/psyevo-test-time-learning.png',
+        alt: 'PsyEvo 测试时学习：会谈内咨询与会谈间 HBSP、群体 LiPO、SOCA 更新',
         links: [],
         summary:
           'PsyEvo 在冻结基础模型上结合个体咨询技能选择与跨来访者的回应策略学习，面向此前未见的来访者，在持续交互中学习“对这个人选择什么干预”与“如何更好地回应”。',
