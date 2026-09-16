@@ -45,10 +45,11 @@ const copy = {
           { label: 'PDF', href: '/papers/acmmm-2026-metric-aware-tta.pdf' },
         ],
         summary:
-          'Project source: NeuroMM-2026 Multimodal Epileptiform-Discharge Detection Challenge (ACM Multimedia 2026); 3rd place in both binary spike detection and five-class subtype classification tracks.',
+          "Project source: Motivated by an interest in BCI, entered the NeuroMM-2026 Multimodal Epileptiform-Discharge Detection Challenge as an individual participant. Independently designed the algorithms, implemented the proposed methods, and conducted experimental validation.",
         highlights: [
-          'Overview: EEG-video epileptiform-discharge detection under cross-patient distribution shift, using test-time adaptation with a frozen model and no target-patient labels.',
-          'Contribution: JMTR builds a joint EEG-video nearest-neighbor graph to refine detection-score ranking, improving AUPRC from 0.9781 to 0.9937; DGC gates prior alignment according to patient-level class-distribution shift and calibrates subtype posteriors, improving F1 from 0.67 to 0.80.',
+          "Overview: A label-free test-time adaptation framework for cross-patient EEG-video epileptiform-discharge detection, correcting detection rankings and subtype posteriors with model weights frozen.",
+          "Contributions: (1) JMTR addresses the inability of order-preserving calibration to improve AUPRC. Standardized, scale-balanced relative band-power and DINOv2 video features form a joint kNN graph; a single anchored update blends original scores with neighborhood averages to re-rank predictions while bounding deviation from the original outputs. (2) DGC measures drift through the L1 distance between predicted target proportions and the training prior, gating between prior alignment via iterative proportional fitting and neighborhood smoothing in log-probability space. Larger drift reduces source-prior constraints and preserves the target class distribution.",
+          "Results: Third place in both NeuroMM-2026 binary and five-class tracks; AUPRC improved from 0.9781 to 0.9937 and five-class weighted-F1 from 0.7772 to 0.7891.",
         ],
       },
       {
@@ -62,10 +63,10 @@ const copy = {
         alt: 'PsyEvo test-time learning: within-session counseling and between-session HBSP, population LiPO, and SOCA updates',
         links: [],
         summary:
-          'Overview: For previously unseen clients, PsyEvo combines client-specific counseling-skill selection with cross-client response-strategy learning over a frozen base model, learning both which intervention suits each person and how to respond more effectively through continued interaction.',
+          "Overview: For multi-session counseling, a frozen base model combines personalized counseling-skill selection with cross-client response-strategy learning, learning which intervention suits each person and how to respond more effectively.",
         highlights: [
-          'Contribution: (1) HBSP combines shared state-skill values with client-specific posteriors and selects counseling skills through posterior sampling. (2) LiPO aggregates cross-client preference experience and updates a shared lightweight adapter between sessions. (3) SOCA addresses compressed self-scores by constructing candidate preferences through relative comparison and consistency checking, then propagating discounted ordinal credit along realized session trajectories for response optimization and skill learning.',
-          'Results: PsyEvo achieves SOTA on PsychEval and MusPsy for multi-session counseling, with an overall score of 7.675 and a mean working-alliance score of 4.5850. SOCA achieves SOTA on SummEval for summary-quality evaluation, with a mean Spearman correlation of 0.508.',
+          "Contributions: (1) HBSP combines shared state-skill values with client-specific posteriors for skill selection through posterior sampling, updating individual values from client outcomes along realized sessions. (2) LiPO aggregates cross-client candidate-response rankings to update a shared lightweight adapter between sessions. (3) SOCA uses relative comparison and consistency checking to address compressed self-scores, using candidate preferences for response optimization and discounted ordinal credit along realized trajectories for skill learning, while distinguishing response quality from client outcomes.",
+          "Results: PsyEvo achieves SOTA on PsychEval and MusPsy for multi-session counseling, with an overall score of 7.675 and a mean working-alliance score of 4.5850. SOCA achieves SOTA on SummEval for summary-quality evaluation, with a mean Spearman correlation of 0.508.",
         ],
       },
       {
@@ -79,10 +80,10 @@ const copy = {
         alt: 'TopoCMamba paper preview',
         links: [],
         summary:
-          'Overview: TopoCMamba addresses cross-domain distribution shifts caused by variations in clinical acquisition and studies unseen-domain medical image segmentation, with an emphasis on stable anatomical-structure and boundary prediction.',
+          "Overview: Unseen-domain medical image segmentation under distribution shifts caused by heterogeneous clinical acquisition, focusing on state mixing when Mamba scans cross anatomical boundaries.",
         highlights: [
-          'Method: Contributed to the Frequency-Topology Conductance Field (FTCF) and Conductance-Gated State Scan (CGSS), injecting frequency structure and topological boundary information into Mamba state propagation to suppress cross-boundary feature mixing.',
-          'Experiments: Evaluated on 15 datasets across six medical imaging modalities to assess boundary preservation and unseen-domain segmentation robustness under heterogeneous acquisition settings.',
+          "Contributions: Contributed to the Frequency-Topology Conductance Field (FTCF) and Conductance-Gated State Scan (CGSS), combining low-frequency structure and high-frequency boundary information to strengthen within-structure propagation and suppress cross-boundary mixing. Joint modeling of regions, boundaries, and local affinities compensates for structural detail lost during decoding.",
+          "Results: Evaluated on 15 datasets across six medical imaging modalities, improving boundary delineation and structural integrity under heterogeneous acquisition settings while maintaining favorable computational efficiency.",
         ],
       },
     ],
@@ -129,15 +130,16 @@ const copy = {
           { label: 'PDF', href: '/papers/acmmm-2026-metric-aware-tta.pdf' },
         ],
         summary:
-          '课题来源：NeuroMM-2026 多模态癫痫样放电检测挑战赛（ACM Multimedia 2026），二分类棘波检测与五类亚型分类两个 track 均获第三名。',
+          "课题来源：出于对 BCI 的兴趣，以个人身份参加 NeuroMM-2026 多模态癫痫样放电检测挑战赛，独立完成算法设计、创新方法实现与实验验证。",
         highlights: [
-          '内容概述：基于 EEG 与视频检测癫痫样放电，针对跨患者分布偏移，在冻结模型、不使用目标患者标签的条件下进行测试时自适应。',
-          '创新点：按评价指标选择适配对象：JMTR 构建 EEG-视频联合近邻图，修正检测分数排序，AUPRC 从 0.9781 提升至 0.9937；DGC 根据患者类别分布偏移门控先验对齐，校正亚型后验，F1 从 0.67 提升至 0.80。',
+          "内容概述：面向跨患者 EEG-视频癫痫样放电检测，设计无需目标标签、不更新模型权重的测试时自适应框架，分别校正检测排序与亚型分类后验。",
+          "创新点：1. JMTR：针对保序校准无法改善 AUPRC 的问题，将相对频带功率与 DINOv2 视频特征标准化、尺度平衡后构建联合 kNN 图；融合原始分数与邻域均值，进行单步重排序，限制校正偏离原始预测的幅度。2. DGC：以目标预测分布与训练先验的 L1 距离衡量漂移，在迭代比例拟合的先验对齐与 log 概率空间近邻平滑之间门控加权，漂移较大时减少先验约束、保留目标类别分布。",
+          "效果：NeuroMM-2026 二分类和五分类赛道均获第三名；AUPRC 由 0.9781 提升至 0.9937，五分类 weighted-F1 由 0.7772 提升至 0.7891。",
         ],
       },
       {
         title:
-          'PsyEvo：面向多会谈心理咨询的测试时个性化与自进化 / PsyEvo: Test-Time Personalization and Self-Evolution for Multi-Session Counseling',
+          'PsyEvo：面向多会谈心理咨询的测试时个性化与自进化 Agent / PsyEvo: Test-Time Personalization and Self-Evolution for Multi-Session Counseling',
         authors: '',
         venue: 'ICLR 2027（在投）',
         status: 'submitted',
@@ -146,10 +148,10 @@ const copy = {
         alt: 'PsyEvo 测试时学习：会谈内咨询与会谈间 HBSP、群体 LiPO、SOCA 更新',
         links: [],
         summary:
-          '内容概述：面向此前未见的来访者，在冻结基础模型上结合个体咨询技能选择与跨来访者的回应策略学习，使 Agent 在持续交互中学习“对这个人选择什么干预”与“如何更好地回应”。',
+          "内容概述：面向多会谈心理咨询，在冻结基础模型上结合个体咨询技能选择与跨来访者的回应策略学习，使 Agent 在持续交互中学习“对这个人选择什么干预”与“如何更好地回应”。",
         highlights: [
-          '创新点：1. 个性化（HBSP）：结合共享状态—技能价值与来访者专属后验，通过后验采样选择咨询技能。2. 自进化（LiPO）：汇集跨来访者的偏好经验，在会谈间更新共享轻量适配器，改进回应策略。3. 信用分配（SOCA）：针对自评分数压缩，通过相对比较与一致性核验构造候选偏好，并沿已发生的会谈轨迹折扣传播序数信用，分别支持回应优化和技能学习。',
-          '效果：多会谈心理咨询任务：PsyEvo 在 PsychEval 和 MusPsy 上达到 SOTA，综合均分和工作同盟均分分别为 7.675、4.5850。摘要质量评估任务：SOCA 在 SummEval 上达到 SOTA，平均 Spearman 相关系数为 0.508。',
+          "创新点：1. HBSP：结合共享状态—技能价值与来访者专属后验，通过后验采样选择技能，依据已发生会谈中的来访者结果更新个体价值。2. LiPO：汇集跨来访者的候选回复排序，在会谈间更新共享轻量适配器。3. SOCA：通过相对比较与一致性核验缓解自评分数压缩，将候选偏好用于回应优化，将真实轨迹上的折扣序数信用用于技能学习，区分回复质量与来访者结果两类信号。",
+          "效果：PsyEvo 在 PsychEval 和 MusPsy 多会谈心理咨询任务上达到 SOTA，综合均分和工作同盟均分分别为 7.675、4.5850；SOCA 在 SummEval 摘要质量评估任务上达到 SOTA，平均 Spearman 相关系数为 0.508。",
         ],
       },
       {
@@ -163,10 +165,10 @@ const copy = {
         alt: 'TopoCMamba 论文预览图',
         links: [],
         summary:
-          '内容概述：针对临床采集条件变化造成的跨域分布偏移，研究未见域医学图像分割，重点提升解剖结构与边界预测的稳定性。',
+          "内容概述：针对临床采集异质性引起的跨域分布偏移，研究未见域医学图像分割，重点改善 Mamba 扫描跨越解剖边界时的状态混合问题。",
         highlights: [
-          '方法：参与设计频率—拓扑传导场（FTCF）与传导门控状态扫描（CGSS），将频率结构和拓扑边界信息注入 Mamba 状态传播，抑制跨边界特征混合。',
-          '实验：在 15 个数据集、6 种医学影像模态上进行验证，系统评估模型在异质采集条件下的边界保持能力与未见域分割鲁棒性。',
+          "创新点：参与设计频率—拓扑传导场（FTCF）与传导门控状态扫描（CGSS），结合低频结构与高频边界信息调节状态转移，增强结构内传播、抑制跨边界混合；通过区域、边界和局部亲和性联合建模，补偿解码中的结构细节损失。",
+          "效果：在 15 个数据集、6 种医学影像模态上验证，改善异质采集条件下的边界勾画与结构完整性，并保持较好的计算效率。",
         ],
       },
     ],
