@@ -36,7 +36,7 @@ const copy = {
         title:
           'Metric-Aware Test-Time Adaptation for Cross-Subject Multimodal Epileptiform-Discharge Detection',
         authors: '',
-        venue: 'ACM MM 2026',
+        venue: 'ACM MM 2026 · Accepted',
         status: 'accepted',
         role: 'First Author',
         image: '/assets/acmmm-framework.png?v=20260826d',
@@ -56,7 +56,7 @@ const copy = {
         title:
           'PsyEvo: Test-Time Personalization and Self-Evolution for Multi-Session Counseling',
         authors: '',
-        venue: 'ICLR 2027',
+        venue: 'ICLR 2027, under submission',
         status: 'submitted',
         role: 'Co-first Author',
         image: '/assets/psyevo-test-time-learning.png?v=20260917b',
@@ -73,7 +73,7 @@ const copy = {
         title:
           'Reparameterizing Mamba via Frequency-Induced Topological Conduction for Medical Image Segmentation under Clinical Acquisition Heterogeneity',
         authors: '',
-        venue: 'AAAI 2027',
+        venue: 'AAAI 2027, under submission',
         status: 'submitted',
         role: 'Second Author',
         image: '/assets/topocmamba-preview.png?v=20260826c',
@@ -121,7 +121,7 @@ const copy = {
         title:
           '面向跨受试者多模态癫痫样放电检测的指标感知测试时自适应 / Metric-Aware Test-Time Adaptation for Cross-Subject Multimodal Epileptiform-Discharge Detection',
         authors: '',
-        venue: 'ACM MM 2026',
+        venue: 'ACM MM 2026 · 已录用',
         status: 'accepted',
         role: '第一作者',
         image: '/assets/acmmm-framework.png?v=20260826d',
@@ -141,7 +141,7 @@ const copy = {
         title:
           'PsyEvo：面向多会谈心理咨询的测试时个性化与自进化 Agent / PsyEvo: Test-Time Personalization and Self-Evolution for Multi-Session Counseling',
         authors: '',
-        venue: 'ICLR 2027',
+        venue: 'ICLR 2027（在投）',
         status: 'submitted',
         role: '共同第一作者',
         image: '/assets/psyevo-test-time-learning.png?v=20260917b',
@@ -158,7 +158,7 @@ const copy = {
         title:
           'TopoCMamba：面向临床采集异质性的医学图像分割 / Reparameterizing Mamba via Frequency-Induced Topological Conduction for Medical Image Segmentation under Clinical Acquisition Heterogeneity',
         authors: '',
-        venue: 'AAAI 2027',
+        venue: 'AAAI 2027（在投）',
         status: 'submitted',
         role: '第二作者',
         image: '/assets/topocmamba-preview.png?v=20260826c',
@@ -290,9 +290,8 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="pub-meta">
-                      <span>{paper.venue}{lang === 'zh'
-                        ? `（${paper.role}，${paper.status === 'accepted' ? '已录用' : '在投'}）`
-                        : ` (${paper.role}, ${paper.status === 'accepted' ? 'Accepted' : 'Under Review'})`}</span>
+                      <span>{paper.role}</span>
+                      <span>{paper.venue}</span>
                     </div>
                     <h4>{paper.title}</h4>
                     {paper.authors ? (
