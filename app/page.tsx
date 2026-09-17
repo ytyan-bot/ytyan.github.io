@@ -26,7 +26,7 @@ const copy = {
     publicationsTitle: 'Research',
     publicationGroups: [{ status: 'accepted', label: 'Accepted Publications' }, { status: 'submitted', label: 'Under Submission' }],
     educationTitle: 'Education',
-    footer: 'Last updated 2026-09-16 · Designed for ytyan.github.io',
+    footer: 'Last updated 2026-09-17 · Designed for ytyan.github.io',
     interests: [
       'Large language models and intelligent agents',
       'Brain-computer interfaces and EEG analysis',
@@ -65,7 +65,7 @@ const copy = {
         summary:
           "Overview: For multi-session counseling, a frozen base model combines personalized counseling-skill selection with cross-client response-strategy learning, learning which intervention suits each person and how to respond more effectively.",
         highlights: [
-          "Contributions: (1) HBSP combines shared state-skill values with client-specific posteriors for skill selection through posterior sampling, updating individual values from client outcomes along realized sessions. (2) LiPO aggregates cross-client candidate-response rankings to update a shared lightweight adapter between sessions. (3) SOCA uses relative comparison and consistency checking to address compressed self-scores, using candidate preferences for response optimization and discounted ordinal credit along realized trajectories for skill learning, while distinguishing response quality from client outcomes.",
+          "Contributions: (1) HBSP combines shared state-skill values with client-specific posteriors for skill selection through posterior sampling, updating individual values from client outcomes along realized sessions. (2) LiPO aggregates cross-client candidate-response rankings to update a shared lightweight adapter between sessions. (3) SOCA uses relative comparison and consistency checking to address compressed self-scores, using candidate preferences for response optimization and discounted ordinal credit along realized trajectories for skill learning, while distinguishing response quality from client outcomes. Subsequent clients benefit from improvements to the shared policy while retaining their own skill biases.",
           "Results: PsyEvo achieves SOTA on PsychEval and MusPsy for multi-session counseling, with an overall score of 7.675 and a mean working-alliance score of 4.5850. SOCA achieves SOTA on SummEval for summary-quality evaluation, with a mean Spearman correlation of 0.508.",
         ],
       },
@@ -111,7 +111,7 @@ const copy = {
     publicationsTitle: '科研成果',
     publicationGroups: [{ status: 'accepted', label: '已录用论文' }, { status: 'submitted', label: '在投论文' }],
     educationTitle: '教育经历',
-    footer: '最近更新 2026-09-16 · Designed for ytyan.github.io',
+    footer: '最近更新 2026-09-17 · Designed for ytyan.github.io',
     interests: [
       '大语言模型与智能体',
       '脑机接口与 EEG 信号分析',
@@ -150,7 +150,7 @@ const copy = {
         summary:
           "内容概述：面向多会谈心理咨询，在冻结基础模型上结合个体咨询技能选择与跨来访者的回应策略学习，使 Agent 在持续交互中学习“对这个人选择什么干预”与“如何更好地回应”。",
         highlights: [
-          "创新点：1. HBSP：结合共享状态—技能价值与来访者专属后验，通过后验采样选择技能，依据已发生会谈中的来访者结果更新个体价值。2. LiPO：汇集跨来访者的候选回复排序，在会谈间更新共享轻量适配器。3. SOCA：通过相对比较与一致性核验缓解自评分数压缩，将候选偏好用于回应优化，将真实轨迹上的折扣序数信用用于技能学习，区分回复质量与来访者结果两类信号。",
+          "创新点：1. HBSP：结合共享状态—技能价值与来访者专属后验，通过后验采样选择技能，依据已发生会谈中的来访者结果更新个体价值。2. LiPO：汇集跨来访者的候选回复排序，在会谈间更新共享轻量适配器。3. SOCA：通过相对比较与一致性核验缓解自评分数压缩，将候选偏好用于回应优化，将真实轨迹上的折扣序数信用用于技能学习，区分回复质量与来访者结果两类信号。后续来访者可受益于共享策略的持续改进，同时保留各自独立的技能偏置。",
           "效果：PsyEvo 在 PsychEval 和 MusPsy 多会谈心理咨询任务上达到 SOTA，综合均分和工作同盟均分分别为 7.675、4.5850；SOCA 在 SummEval 摘要质量评估任务上达到 SOTA，平均 Spearman 相关系数为 0.508。",
         ],
       },
