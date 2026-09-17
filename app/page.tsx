@@ -59,7 +59,7 @@ const copy = {
         venue: 'ICLR 2027',
         status: 'submitted',
         role: 'Co-first Author',
-        image: '/assets/psyevo-test-time-learning.png',
+        image: '/assets/psyevo-test-time-learning.png?v=20260917b',
         alt: 'PsyEvo test-time learning: within-session counseling and between-session HBSP, population LiPO, and SOCA updates',
         links: [],
         summary:
@@ -144,7 +144,7 @@ const copy = {
         venue: 'ICLR 2027',
         status: 'submitted',
         role: '共同第一作者',
-        image: '/assets/psyevo-test-time-learning.png',
+        image: '/assets/psyevo-test-time-learning.png?v=20260917b',
         alt: 'PsyEvo 测试时学习：会谈内咨询与会谈间 HBSP、群体 LiPO、SOCA 更新',
         links: [],
         summary:
